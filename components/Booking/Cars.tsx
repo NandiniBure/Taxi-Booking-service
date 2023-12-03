@@ -4,7 +4,7 @@ import React, { useState ,useContext} from 'react'
 import Image from 'next/image'
 import {directiondataContext} from "@/context/DirectiondataContext"
 import Cards from "./Cards"
-import { useParams } from "next/navigation"
+import { useParams ,useRouter} from "next/navigation"
 import qs from "query-string";
 import axios from "axios"
 import { sourcenameContext } from "@/context/Sourcename"
@@ -22,10 +22,11 @@ const Cars = () => {
    const Source=sourcename;
   const Destination=destinationname;
 const data={Price,Source,Destination,name,payment}
-
+const route=useRouter();
 const handleclick=async(result:any)=>{
   try{
    const booking = await axios.post("/api/booking",result) 
+   route.push("/history")
   }catch(error){
      console.log("error in post",error)
   }
