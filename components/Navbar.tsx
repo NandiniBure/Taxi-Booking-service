@@ -18,12 +18,15 @@ const  Navbar = async() => {
         </div>
           
            <div className='hidden md:flex gap-6'>
+            <Link href="/service">
                <h2 className='hover:bg-[#FEE715FF] p-2
                rounded-md cursor-pointer transition-all'>Home</h2>
+            </Link>
                <Link href='/history' >
                <h2 className='hover:bg-[#FEE715FF] p-2
                rounded-md cursor-pointer transition-all'>History</h2>
                </Link>
+              
                <h2 className='hover:bg-[#FEE715FF] p-2
                rounded-md cursor-pointer transition-all'>Help</h2>
            </div>

@@ -17,15 +17,14 @@ const Cars = () => {
     const [payment,setpayment]=useState<any>("cash")
     const {sourcename,setsourcename}=useContext(sourcenameContext)
     const {destinationname,setdestinationname}=useContext(destinationnameContext)
- 
-
    const Source=sourcename;
   const Destination=destinationname;
 const data={Price,Source,Destination,name,payment}
 const route=useRouter();
 const handleclick=async(result:any)=>{
   try{
-   const booking = await axios.post("/api/booking",result) 
+    console.log("jgdfkjb")
+   await axios.post("/api/booking",result);
    route.push("/history")
   }catch(error){
      console.log("error in post",error)

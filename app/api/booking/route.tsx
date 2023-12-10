@@ -1,7 +1,6 @@
 import { db } from "@/lib/db";
 import { currentUser } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
-import { User } from "@prisma/client";
 export async function POST(
     req:Request
     ) {
@@ -13,11 +12,6 @@ export async function POST(
              return new NextResponse("unauthorized",{status:401})
            }
 
-           const userdetail=await db.user.findFirst({
-            where:{
-                id:profile.id
-            }
-           })
 
            const ride=await db.user.update({
                where:{

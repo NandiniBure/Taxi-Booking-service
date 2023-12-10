@@ -101,7 +101,7 @@ const AutocompleteAddress = () => {
               addresslist?.suggestions?.map((item:any,index:number)=>(
               <h1
               onClick={()=>{onSourceAddressClick(item)}}
-               className=' p-3 cursor-pointer hover:text-gray-400 '>{item.full_address}</h1>
+               className=' p-3 cursor-pointer dark:text-black dark:hover:text-gray-400 '>{item.full_address}</h1>
               ))}
            </div> 
            }    
@@ -124,7 +124,7 @@ const AutocompleteAddress = () => {
               addresslist?.suggestions?.map((item:any,index:number)=>(
               <h1
               onClick={()=>{onDestinationAddressClick(item)}}
-               className=' p-3 cursor-pointer hover:text-gray-400 '>{item.full_address}</h1>
+               className=' p-3 cursor-pointer dark:text-black dark:hover:text-gray-400 '>{item.full_address}</h1>
               ))}
            </div> 
            }
